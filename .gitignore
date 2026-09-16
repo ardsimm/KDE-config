@@ -1,0 +1,20 @@
+# Ignore tout à la racine du dépôt (pas récursif)
+/*
+
+# Exceptions : tout le contenu de ces dossiers est suivi
+!/.gitignore
+!/btop/
+!/kitty/
+!/nvim/
+!/zed/
+!/zsh/
+!/.zshrc
+
+# Code - OSS : uniquement la config utilisateur, pas les caches
+!/Code - OSS/
+/Code - OSS/*
+!/Code - OSS/User/
+/Code - OSS/User/*
+!/Code - OSS/User/settings.json
+!/Code - OSS/User/keybindings.json
+!/Code - OSS/User/snippets/
