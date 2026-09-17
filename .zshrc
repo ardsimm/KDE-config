@@ -74,7 +74,7 @@ alias gotocdx="cd $CODEXION_DIR"
 
 # config
 
-alias gotoconfig="cd $CONFIG_DIR"
+alias gotoconf="cd $CONFIG_DIR"
 
 # ---------- zshrc ----------
 alias reload="clear && source ~/.zshrc"
@@ -83,8 +83,8 @@ alias saveconf="cp ~/.zshrc $CONFIG_DIR"
 
 commitconf() {
 	saveconf || return 1
-	git -C "$CONFIG_DIR" add .zshrc
-	git -C "$CONFIG_DIR" commit -m "update .zshrc" && git -C "$CONFIG_DIR" push
+	git -C "$CONFIG_DIR" add .
+	git -C "$CONFIG_DIR" commit -m "auto update" && git -C "$CONFIG_DIR" push
 }
 
 # ---------- Package installation ----------#
