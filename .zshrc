@@ -91,14 +91,14 @@ commitconf() {
 
 # pacman
 alias pinstall="sudo pacman -Sy"
-alias premove="sudo pacman -Ry"
-alias premoved="sudo pacman -Rsy"
+alias premove="sudo pacman -R"
+alias premoved="sudo pacman -Rs"
 alias pupdate="sudo pacman -Syu"
 
 # yay
 alias yinstall="yay -Sy"
-alias yremove="yay -Ry"
-alias yremoved="yay -Rsy"
+alias yremove="yay -R"
+alias yremoved="yay -Rs"
 alias yupdate="yay -Syu"
 
 # ---------- Development tools -----------
@@ -115,3 +115,7 @@ alias vg="valgrind --leak-check=full -s --show-mismatched-frees=yes --track-orig
 
 # Lazygit
 alias lg="lazygit"
+
+
+# ---------- Overrides ----------
+alias clear="clear && greet"
