@@ -12,7 +12,6 @@ source $ZSH/oh-my-zsh.sh
 # ========== Greet ==========
 
 alias greet="python3 /home/ardsimm/.config/zsh/welcome.py"
-greet
 
 # ========== ENV Variables ==========
 #
@@ -32,7 +31,9 @@ MS_0_DIR="$COMMON_CORE_DIR/ms-0"
 MS_1_DIR="$COMMON_CORE_DIR/ms-1"
 MS_2_DIR="$COMMON_CORE_DIR/ms-2"
 MS_3_DIR="$COMMON_CORE_DIR/ms-3"
+MS_4_dir="$COMMON_CORE_DIR/ms-4"
 CODEXION_DIR="$MS_3_DIR/codexion"
+NETPRACTICE_DIR="$MS_4_DIR/netpractice"
 
 # config
 CONFIG_DIR="$HOME/.config"
@@ -40,12 +41,14 @@ CONFIG_DIR="$HOME/.config"
 # ========== ALIASES ==========
 #
 # ---------- Git ----------
+
 # Addig & Commiting
 alias ga="git add"
 alias gaa="git add ."
 alias gc="git commit"
 alias gcm="git commit -m"
 alias gcam="git commit --amend"
+
 # Pushing & Pulling
 alias gpl="git pull"
 alias gps="git push"
@@ -71,9 +74,9 @@ alias gotoms1="cd $MS_1_DIR"
 alias gotoms2="cd $MS_2_DIR"
 alias gotoms3="cd $MS_3_DIR"
 alias gotocdx="cd $CODEXION_DIR"
+alias gotonp="cd $NETPRACTICE_DIR"
 
 # config
-
 alias gotoconf="cd $CONFIG_DIR"
 
 # ---------- zshrc ----------
@@ -87,7 +90,7 @@ commitconf() {
 	git -C "$CONFIG_DIR" commit -m "auto update" && git -C "$CONFIG_DIR" push
 }
 
-# ---------- Package installation ----------#
+# ---------- Package installation ----------
 
 # pacman
 alias pinstall="sudo pacman -Sy"
@@ -115,7 +118,3 @@ alias vg="valgrind --leak-check=full -s --show-mismatched-frees=yes --track-orig
 
 # Lazygit
 alias lg="lazygit"
-
-
-# ---------- Overrides ----------
-alias clear="clear && greet"
